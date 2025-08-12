@@ -1,15 +1,14 @@
 ================================================
 RECIBO DE COMPRA
 ================================================
-Nome: luciano 2010
-Idade: 15 anos
-Quantidade de passagens: 3
-Valor unitário: R$ 3,60
-Custo total: R$ 10,80
+Nome: luciano 1950
+Idade: 75 anos
+Quantidade de passagens: 7
+Valor unitário: R$ 2,70
+Custo total: R$ 18,90
 Valor pago: R$ 20,00
-Troco a receber: R$ 9,20
+Troco a receber: R$ 1,10
 
 Devolução do troco:
- - 1 nota(s) de R$ 5,00
- - 2 nota(s) de R$ 2,00
+ - 1 moeda(s) de R$ 1,00
 ================================================

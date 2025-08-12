@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-catraka.py
+terminal_passagens.py
 
 Funcionalidades existentes:
 - Simulação de terminal de autoatendimento para compra de passagens de ônibus.
@@ -17,17 +17,11 @@ Funcionalidades existentes:
 - Numeração global sequencial de recibos, sem repetição mesmo entre usuários diferentes.
 - Permite múltiplas compras pelo mesmo usuário até encerrar.
 
-Alterações implementadas em agosto/2025:
-- Adicionado uso de BASE_DIR para garantir que todos os arquivos e pastas (recibos, contador_global.txt)
-  sejam salvos sempre na mesma pasta onde o catraka.py está armazenado, independente do diretório de execução.
 """
 
 import os
 from decimal import Decimal, ROUND_HALF_UP, getcontext
 from typing import Dict
-
-# Caminho base fixo para a pasta do script
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Configurações / constantes
 getcontext().prec = 9
@@ -37,7 +31,7 @@ DENOMINATIONS_CENTS = [
     10000, 5000, 2000, 1000, 500, 200,
     100, 50, 25
 ]
-GLOBAL_COUNTER_FILE = os.path.join(BASE_DIR, "contador_global.txt")
+GLOBAL_COUNTER_FILE = "contador_global.txt"
 
 
 def format_brl(valor: Decimal) -> str:
@@ -146,10 +140,9 @@ def salvar_contador_global(valor: int):
 def salvar_recibo(numero: int, pasta_usuario: str, nome: str, idade: int, quantidade: int, preco_unit: Decimal,
                    custo_total: Decimal, valor_pago: Decimal, troco: Decimal,
                    decomposicao: Dict[Decimal, int]):
-    pasta_usuario_path = os.path.join(BASE_DIR, pasta_usuario)
-    if not os.path.exists(pasta_usuario_path):
-        os.makedirs(pasta_usuario_path)
-    nome_arquivo = os.path.join(pasta_usuario_path, f"recibo_{numero:04d}.txt")
+    if not os.path.exists(pasta_usuario):
+        os.makedirs(pasta_usuario)
+    nome_arquivo = os.path.join(pasta_usuario, f"recibo_{numero:04d}.txt")
     with open(nome_arquivo, "w", encoding="utf-8") as f:
         f.write("="*48 + "\n")
         f.write("RECIBO DE COMPRA\n")
