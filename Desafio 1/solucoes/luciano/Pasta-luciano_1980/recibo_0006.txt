@@ -1,0 +1,16 @@
+================================================
+RECIBO DE COMPRA
+================================================
+Nome: luciano 1980
+Idade: 45 anos
+Quantidade de passagens: 5
+Valor unitário: R$ 4,50
+Custo total: R$ 22,50
+Valor pago: R$ 30,00
+Troco a receber: R$ 7,50
+
+Devolução do troco:
+ - 1 nota(s) de R$ 5,00
+ - 1 nota(s) de R$ 2,00
+ - 1 moeda(s) de R$ 0,50
+================================================
