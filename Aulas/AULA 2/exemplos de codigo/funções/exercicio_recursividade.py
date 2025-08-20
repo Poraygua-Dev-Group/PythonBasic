@@ -10,7 +10,7 @@ def contagem_regressiva(numero: int) -> None:
         print(numero)
         contagem_regressiva(numero - 1)
 
-
+        
 print("Iniciando contagem...")
 contagem_regressiva(5)
 print("Fim da contagem.")
